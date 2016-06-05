@@ -1,0 +1,175 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{nty}{nty}
+    \entry{fpspindynamik}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b29331b9902438ce891f093a1cd88cd0}{Abteilung\bibnamedelima Nanostrukturen}{A\bibinitperiod\bibinitdelim N\bibinitperiod}{Leibniz\bibnamedelimb Universität\bibnamedelima Hannover}{L\bibinitperiod\bibinitdelim U\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{Institut\bibnamedelimb für\bibnamedelima Festkörperphysik}{I\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim F\bibinitperiod}}%
+      }
+      \strng{namehash}{b29331b9902438ce891f093a1cd88cd0}
+      \strng{fullhash}{b29331b9902438ce891f093a1cd88cd0}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Spindynamik in Halbleitern FP zum Modul ''Einführung in die Festkörperphysik``}
+      \field{year}{2012}
+    \endentry
+    \entry{dzhioev2002low}{article}{}
+      \name{author}{9}{}{%
+        {{hash=8143ac1807b9d0dd4c6d3bec63269af6}{Dzhioev}{D\bibinitperiod}{RI}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=3dec08931de3c970d29d8076e41f67ce}{Kavokin}{K\bibinitperiod}{KV}{K\bibinitperiod}{}{}{}{}}%
+        {{hash=e73bc36e122394a77447f887de8d73d0}{Korenev}{K\bibinitperiod}{VL}{V\bibinitperiod}{}{}{}{}}%
+        {{hash=d00bd82d91f42d80e8b71c752351a1c9}{Lazarev}{L\bibinitperiod}{MV}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=72708bc6d72a2b629d61eb907d4cd4c3}{Meltser}{M\bibinitperiod}{B\bibnamedelima Ya}{B\bibinitperiod\bibinitdelim Y\bibinitperiod}{}{}{}{}}%
+        {{hash=e9f5a804ea022c78bdabe652a96348a9}{Stepanova}{S\bibinitperiod}{MN}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=cb236e0936fafa88c64c60f352dff12d}{Zakharchenya}{Z\bibinitperiod}{BP}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=00066c11beb96106d0696ddb64f59238}{Gammon}{G\bibinitperiod}{D}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=406eea6e361a1c8f9381cb71d2d64947}{Katzer}{K\bibinitperiod}{DS}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {APS}%
+      }
+      \strng{namehash}{9f61b5841286e7922d5a874837847d6c}
+      \strng{fullhash}{266670149091051937e1fca5f0dc409d}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review B}
+      \field{number}{24}
+      \field{title}{Low-temperature spin relaxation in n-type GaAs}
+      \field{volume}{66}
+      \field{year}{2002}
+      \field{pages}{245204}
+      \range{pages}{1}
+    \endentry
+    \entry{mohr2012codata}{article}{}
+      \name{author}{3}{}{%
+        {{hash=862b212e77c421211a96c4a9a9cb4627}{Mohr}{M\bibinitperiod}{Peter\bibnamedelima J}{P\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=206bea2ce0290e4b0290d308293f8066}{Taylor}{T\bibinitperiod}{Barry\bibnamedelima N}{B\bibinitperiod\bibinitdelim N\bibinitperiod}{}{}{}{}}%
+        {{hash=c3225634e2d124419ca4b705e3f903f4}{Newell}{N\bibinitperiod}{David\bibnamedelima B}{D\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {AIP Publishing}%
+      }
+      \strng{namehash}{097352634979d5e618ece53cf9ccc3c1}
+      \strng{fullhash}{097352634979d5e618ece53cf9ccc3c1}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Physical and Chemical Reference Data}
+      \field{number}{4}
+      \field{title}{CODATA Recommended Values of the Fundamental Physical Constants: 2010a)}
+      \field{volume}{41}
+      \field{year}{2012}
+      \field{pages}{043109}
+      \range{pages}{1}
+    \endentry
+    \entry{snider19901d}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9c7fb15019ba1864e1d7c18b10194826}{Snider}{S\bibinitperiod}{Greg}{G\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9c7fb15019ba1864e1d7c18b10194826}
+      \strng{fullhash}{9c7fb15019ba1864e1d7c18b10194826}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Department of Electrical Engineering, University of Notre Dame}
+      \field{title}{1D Poisson/Schrödinger User’s Manual A Band Diagram Calculator}
+      \field{volume}{191}
+      \field{year}{1990}
+    \endentry
+    \entry{wu2010spin}{article}{}
+      \name{author}{3}{}{%
+        {{hash=048427e26b46e0df07829af8e5365c34}{Wu}{W\bibinitperiod}{MW}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=b153ba8193bbb816d7c17d9be0db3ae6}{Jiang}{J\bibinitperiod}{JH}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=d63f4823696cd6d39a14bb6775e94aa7}{Weng}{W\bibinitperiod}{MQ}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{986abe4f4d24b7a23b1d511c7b403023}
+      \strng{fullhash}{986abe4f4d24b7a23b1d511c7b403023}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1001.0606}
+      \field{title}{Spin dynamics in semiconductors}
+      \field{year}{2010}
+    \endentry
+    \entry{yucardona}{book}{}
+      \name{author}{2}{}{%
+        {{hash=f7434f41bd1b4fce46c012f13922612b}{Yu}{Y\bibinitperiod}{P.Y.}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=a9fc3487d3c9f7916ca7de218b762cc1}{Cardona}{C\bibinitperiod}{Manuel}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{3f6f07367e79faf2f9845e1e081d3010}
+      \strng{fullhash}{3f6f07367e79faf2f9845e1e081d3010}
+      \field{sortinit}{Y}
+      \field{sortinithash}{3cbc1e3d286284cedb5e5218a3248f94}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Graduate Texts in Physics publishes core learning/teaching material for graduate- and advanced-level undergraduate courses on topics of current and emerging fields within physics, both pure and applied. These textbooks serve students at the MS- or PhD-level and their instructors as comprehensive sources of principles, definitions, derivations, experi- ments and applications (as relevant) for their mastery and teaching, respectively. Interna- tional in scope and relevance, the textbooks correspondto course syllabi sufficiently to serve as required reading. Their didactic style, comprehensiveness and coverage of fundamental material also make them suitable as introductions or references for scientists entering, or requiring timely knowledge of, a research fiel}
+      \field{booktitle}{Fundamentals of Semiconductors: Physics and Materials Properties, edited by PY Yu and M. Cardona. XVIII, 639 p. 250 illus. in color, 116 problems. 3rd rev. and enlargeded. 2005. Corr. 3rd printing 3-540-25470-6. Berlin: Springer, 2005.}
+      \field{isbn}{9783642007095}
+      \field{issn}{0010-7514}
+      \field{title}{{Fundamentals of semiconductors: physics and materials properties}}
+      \field{volume}{1}
+      \field{year}{2005}
+      \field{pages}{1829\bibrangedash 1841}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/978-3-642-00710-1
+      \endverb
+      \verb{file}
+      \verb :home/eduard/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Yu, Cardona - 2005 - Fundamentals of semiconductors physics and materials properties.pdf:pdf
+      \endverb
+    \endentry
+    \entry{zawadzki2008temperature}{article}{}
+      \name{author}{7}{}{%
+        {{hash=cb75dbf190cb49a2e62e57e5fbcdcfe8}{Zawadzki}{Z\bibinitperiod}{Wlodzimierz}{W\bibinitperiod}{}{}{}{}}%
+        {{hash=29126aaeaf13ebbb322cfce3866bcfa1}{Pfeffer}{P\bibinitperiod}{Pawel}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=d1bd01d9590cad9ef53eaebd37fcfe0e}{Bratschitsch}{B\bibinitperiod}{Rudolf}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=02304c0b9b804ad3649c1e344d2635e2}{Chen}{C\bibinitperiod}{Zilong}{Z\bibinitperiod}{}{}{}{}}%
+        {{hash=4bc77dbc897ece333007345258d35c01}{Cundiff}{C\bibinitperiod}{Steven\bibnamedelima T}{S\bibinitperiod\bibinitdelim T\bibinitperiod}{}{}{}{}}%
+        {{hash=47bb541c55d8157eef45181dcb6e1d75}{Murdin}{M\bibinitperiod}{Benedict\bibnamedelima N}{B\bibinitperiod\bibinitdelim N\bibinitperiod}{}{}{}{}}%
+        {{hash=67c818af2845955334505860a9541036}{Pidgeon}{P\bibinitperiod}{Carl\bibnamedelima R}{C\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {APS}%
+      }
+      \strng{namehash}{c70c81474b3f0f8ab522adca5333c03d}
+      \strng{fullhash}{3281d186b454213f907502a0593cc0c1}
+      \field{sortinit}{Z}
+      \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review B}
+      \field{number}{24}
+      \field{title}{Temperature dependence of the electron spin g factor in GaAs}
+      \field{volume}{78}
+      \field{year}{2008}
+      \field{pages}{245203}
+      \range{pages}{1}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
