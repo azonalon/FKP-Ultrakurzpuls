@@ -21,6 +21,8 @@
 
 \addbibresource{sources.bib}
 
+%% MATH COMMANDS
+\newcommand{\dd}[2]{\frac{d{#1}}{d{#2}}}
 
 \usepackage[%
   bookmarks, % Create bookmarks
@@ -60,6 +62,21 @@ Sommersemester 2016}
 \maketitle
 
 \section{Theory}
+\textsl{Bestimmen sie den theoretischen Verlauf der $g_0-P$ Kennlinie} 
+%
+Die Ratengleichungen lauten.
+\begin{align*}
+  T_R \dd{g}{t} & 
+    = \underbrace{\frac{g_0}{T_L}}_{\text{Pumpen}}   
+    - \underbrace{\frac{g P}{ P_{\text{sat}}}}_{\text{Stimulierte Emission}}  
+    - \underbrace{\frac{g}{T_L}}_{\text{Dunkle Abregung}} \\
+  T_R \dd{P}{t} & 
+    = \underbrace{2 g P}_{\text{Stimulierte Emission}}  
+    + \underbrace{2 g P_\text{vac}}_{\text{Spontane Emission}}  
+    - \underbrace{\frac{P}{T_p}}_{\text{Lineare Verluste}}
+\end{align*}
+%
+
 \section{The Potential Well Model}
 \begin{figure}[h!]
   \centering

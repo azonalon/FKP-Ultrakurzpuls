@@ -1,15 +1,15 @@
 [0] Config.pm:327> INFO - This is Biber 2.2
 [0] Config.pm:330> INFO - Logfile is 'main.blg'
-[28] biber:286> INFO - === Sun Jun  5, 2016, 14:25:43
-[28] Biber.pm:334> INFO - Reading 'main.bcf'
-[101] Biber.pm:677> INFO - Found 7 citekeys in bib section 0
+[28] biber:286> INFO - === Sun Jun  5, 2016, 15:25:32
+[29] Biber.pm:334> INFO - Reading 'main.bcf'
+[102] Biber.pm:677> INFO - Found 7 citekeys in bib section 0
 [116] Biber.pm:3054> INFO - Processing section 0
 [127] Biber.pm:3193> INFO - Looking for bibtex format file 'sources.bib' for section 0
 [128] bibtex.pm:1072> INFO - Decoding LaTeX character macros into UTF-8
-[129] bibtex.pm:935> INFO - Found BibTeX data source 'sources.bib'
-[221] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[130] bibtex.pm:935> INFO - Found BibTeX data source 'sources.bib'
 [221] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[221] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
 [221] Biber.pm:2931> INFO - Sorting list 'nty' of type 'entry' with scheme 'nty' and locale 'en-US'
 [221] Biber.pm:2935> INFO - No sort tailoring available for locale 'en-US'
-[233] bbl.pm:505> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[234] bbl.pm:596> INFO - Output to main.bbl
+[235] bbl.pm:505> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[236] bbl.pm:596> INFO - Output to main.bbl
