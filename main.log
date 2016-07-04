@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.3.16)  5 JUN 2016 15:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.3.16)  4 JUL 2016 19:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -344,7 +344,16 @@ File: babel.def 2015/08/03 3.9m Babel common definitions
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
-))
+)
+(/usr/share/texmf-dist/tex/generic/babel-german/ngerman.ldf
+Language: ngerman 2013/12/13 v2.7 German support for babel (new orthography)
+
+(/usr/share/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
+\l@naustrian = a dialect from \language\l@ngerman 
+\l@nswissgerman = a dialect from \language\l@ngerman 
+Package babel Info: Making " an active character on input line 88.
+)))
 (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip48
@@ -1283,6 +1292,56 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )))
+(/usr/share/texmf-dist/tex/latex/floatrow/floatrow.sty
+Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
+
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen169
+\captionmargin@=\dimen170
+\captionwidth=\dimen171
+\caption@tempdima=\dimen172
+\caption@indent=\dimen173
+\caption@parindent=\dimen174
+\caption@hangindent=\dimen175
+)
+\c@float@type=\count384
+\float@exts=\toks35
+\float@box=\box51
+\@floatcapt=\box52
+Package floatrow Info: Modified float package code loaded on input line 455.
+Package floatrow Info: Modified rotfloat package code loaded on input line 473.
+
+\FR@everyfloat=\toks36
+\flrow@foot=\insert252
+\FB@wd=\dimen176
+\FBo@wd=\dimen177
+\FBc@wd=\dimen178
+\FBo@ht=\skip94
+\FBc@ht=\skip95
+\FBf@ht=\skip96
+\FBo@max=\skip97
+\FBc@max=\skip98
+\FBf@max=\skip99
+\c@FBl@b=\count385
+\floatbox@depth=\count386
+\c@FRobj=\count387
+\c@FRsobj=\count388
+\Xhsize=\skip100
+\sXhsize=\skip101
+\Zhsize=\skip102
+\sZhsize=\skip103
+\flrow@rowbox=\box53
+\FR@Zunitlength=\dimen179
+\c@FBcnt=\count389
+\FPOScnt=\count390
+\LTleft=\skip104
+\LTright=\skip105
+\LTleft=\skip106
+\LTright=\skip107
+\flrow@types=\toks37
+)
 (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
@@ -1331,16 +1390,16 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 (/usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen169
-\Hy@linkcounter=\count384
-\Hy@pagecounter=\count385
+\@linkdim=\dimen180
+\Hy@linkcounter=\count391
+\Hy@pagecounter=\count392
 
 (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count386
+\Hy@SavedSpaceFactor=\count393
 
 (/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1360,12 +1419,12 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count387
+\c@Hy@tempcnt=\count394
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen170
-\Fld@menulength=\count388
-\Field@Width=\dimen171
-\Fld@charsize=\dimen172
+\XeTeXLinkMargin=\dimen181
+\Fld@menulength=\count395
+\Field@Width=\dimen182
+\Fld@charsize=\dimen183
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -1375,81 +1434,94 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count389
-\c@Item=\count390
-\c@Hfootnote=\count391
+\Hy@abspage=\count396
+\c@Item=\count397
+\c@Hfootnote=\count398
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count392
-\c@bookmark@seq@number=\count393
+\Fld@listcount=\count399
+\c@bookmark@seq@number=\count400
 
 (/usr/share/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip94
+\Hy@SectionHShift=\skip108
 )
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
+(/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen184
+\WF@size=\dimen185
+\c@WF@wrappedlines=\count401
+\WF@box=\box54
+\WF@everypar=\toks38
+Package: wrapfig 2003/01/31  v 3.6
+)
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
 
-(/usr/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2015/10/21 v3.1 biblatex localization (PK/JW/AB)
-)
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
+File: ngerman.lbx 2015/10/21 v3.1 biblatex localization (PK/JW/AB)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2015/10/21 v3.1 biblatex localization (PK/JW/AB)
+))
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count394
-\@quotereset=\count395
+\@quotelevel=\count402
+\@quotereset=\count403
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 60.
-LaTeX Font Info:    Try loading font information for MDA+cmr on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 70.
+LaTeX Font Info:    Try loading font information for MDA+cmr on input line 70.
  (/usr/share/texmf-dist/tex/latex/mathdesign/mdacmr.fd
 File: mdacmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 60.
-LaTeX Font Info:    Try loading font information for MDB+cmr on input line 60.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 70.
+LaTeX Font Info:    Try loading font information for MDB+cmr on input line 70.
 
 (/usr/share/texmf-dist/tex/latex/mathdesign/mdbcmr.fd
 File: mdbcmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
 
 (/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count396
-\scratchdimen=\dimen173
-\scratchbox=\box51
-\nofMPsegments=\count397
-\nofMParguments=\count398
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count399
-\MPscratchDim=\dimen174
-\MPnumerator=\count400
-\makeMPintoPDFobject=\count401
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count404
+\scratchdimen=\dimen186
+\scratchbox=\box55
+\nofMPsegments=\count405
+\nofMParguments=\count406
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count407
+\MPscratchDim=\dimen187
+\MPnumerator=\count408
+\makeMPintoPDFobject=\count409
+\everyMPtoPDFconversion=\toks40
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1550,16 +1622,16 @@ File: siunitx-abbreviations.cfg 2015/10/15 v2.6m siunitx: Abbreviated units
 .................................................
 . chemgreek info: "mapping-activated"
 . 
-. Activating mapping `mathdesign' on line 60.
+. Activating mapping `mathdesign' on line 70.
 .................................................
 
 
 Package mathdesign/mdbch Warning: Package 'amssymb' shouldn't be used in conjon
-ction with package mdbch, on input line 60.
+ction with package mdbch, on input line 70.
 
 
 Package mathdesign/mdbch Warning: Package 'amsfonts' shouldn't be used in conjo
-nction with package mdbch, on input line 60.
+nction with package mdbch, on input line 70.
 
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -1569,139 +1641,140 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 60.
-Package biblatex Info: Reference segment=0 on input line 60.
-\AtBeginShipoutBox=\box52
-Package hyperref Info: Link coloring OFF on input line 60.
- (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package biblatex Info: Reference section=0 on input line 70.
+Package biblatex Info: Reference segment=0 on input line 70.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ (/usr/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+LaTeX Info: Redefining \color on input line 81.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+)
+\AtBeginShipoutBox=\box56
+Package hyperref Info: Link coloring OFF on input line 70.
+
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count402
+\c@section@level=\count410
 )
-LaTeX Info: Redefining \ref on input line 60.
-LaTeX Info: Redefining \pageref on input line 60.
-LaTeX Info: Redefining \nameref on input line 60.
+LaTeX Info: Redefining \ref on input line 70.
+LaTeX Info: Redefining \pageref on input line 70.
+LaTeX Info: Redefining \nameref on input line 70.
  (./main.out)
 (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-\c__siunitx_mathsf_int=\count403
+\c__siunitx_mathsf_int=\count411
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 60.
+(Font)              scaled to size 7.68005pt on input line 70.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 60.
-LaTeX Font Info:    Try loading font information for OML+mdbch on input line 60
+(Font)              scaled to size 5.76004pt on input line 70.
+LaTeX Font Info:    Try loading font information for OML+mdbch on input line 70
 .
  (/usr/share/texmf-dist/tex/latex/mathdesign/mdbch/omlmdbch.fd
 File: omlmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdbch.
 )
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 60.
+(Font)              scaled to size 10.51207pt on input line 70.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 60.
+(Font)              scaled to size 7.68005pt on input line 70.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 60.
-LaTeX Font Info:    Try loading font information for OMS+mdbch on input line 60
+(Font)              scaled to size 5.76004pt on input line 70.
+LaTeX Font Info:    Try loading font information for OMS+mdbch on input line 70
 .
 
 (/usr/share/texmf-dist/tex/latex/mathdesign/mdbch/omsmdbch.fd
 File: omsmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdbch.
 )
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 60.
+(Font)              scaled to size 10.51207pt on input line 70.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 60.
+(Font)              scaled to size 7.68005pt on input line 70.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 60.
-LaTeX Font Info:    Try loading font information for OMX+mdbch on input line 60
+(Font)              scaled to size 5.76004pt on input line 70.
+LaTeX Font Info:    Try loading font information for OMX+mdbch on input line 70
 .
 
 (/usr/share/texmf-dist/tex/latex/mathdesign/mdbch/omxmdbch.fd
 File: omxmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdbch.
 )
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 60.
+(Font)              scaled to size 10.51207pt on input line 70.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 60.
+(Font)              scaled to size 7.68005pt on input line 70.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 60.
-LaTeX Font Info:    Try loading font information for U+msa on input line 60.
+(Font)              scaled to size 5.76004pt on input line 70.
+LaTeX Font Info:    Try loading font information for U+msa on input line 70.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 60.
+LaTeX Font Info:    Try loading font information for U+msb on input line 70.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 60.
+(Font)              scaled to size 10.51207pt on input line 70.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 60.
+(Font)              scaled to size 7.68005pt on input line 70.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 60.
-LaTeX Font Info:    Try loading font information for MDA+mdbch on input line 60
+(Font)              scaled to size 5.76004pt on input line 70.
+LaTeX Font Info:    Try loading font information for MDA+mdbch on input line 70
 .
 
 (/usr/share/texmf-dist/tex/latex/mathdesign/mdbch/mdamdbch.fd
 File: mdamdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdbch.
 )
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 60.
+(Font)              scaled to size 10.51207pt on input line 70.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 60.
+(Font)              scaled to size 7.68005pt on input line 70.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 60.
-LaTeX Font Info:    Try loading font information for MDB+mdbch on input line 60
+(Font)              scaled to size 5.76004pt on input line 70.
+LaTeX Font Info:    Try loading font information for MDB+mdbch on input line 70
 .
 
 (/usr/share/texmf-dist/tex/latex/mathdesign/mdbch/mdbmdbch.fd
 File: mdbmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdbch.
 )
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 60.
+(Font)              scaled to size 10.51207pt on input line 70.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 60.
+(Font)              scaled to size 7.68005pt on input line 70.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 60.
+(Font)              scaled to size 5.76004pt on input line 70.
 LaTeX Font Info:    Font shape `OT1/cmss/m/n' will be
-(Font)              scaled to size 11.37706pt on input line 60.
+(Font)              scaled to size 11.37706pt on input line 70.
 LaTeX Font Info:    Font shape `OT1/cmss/m/n' will be
-(Font)              scaled to size 8.31201pt on input line 60.
+(Font)              scaled to size 8.31201pt on input line 70.
 LaTeX Font Info:    Font shape `OT1/cmss/m/n' will be
-(Font)              scaled to size 6.23401pt on input line 60.
-\c__siunitx_mathtt_int=\count404
+(Font)              scaled to size 6.23401pt on input line 70.
+\c__siunitx_mathtt_int=\count412
 LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
-(Font)              scaled to size 11.73846pt on input line 60.
+(Font)              scaled to size 11.73846pt on input line 70.
 LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
-(Font)              scaled to size 8.57605pt on input line 60.
+(Font)              scaled to size 8.57605pt on input line 70.
 LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
-(Font)              scaled to size 6.43204pt on input line 60.
-Package epstopdf Info: Source file: <./figures/luh_logo.eps>
-(epstopdf)                    date: 2016-06-05 14:09:53
-(epstopdf)                    size: 35048 bytes
-(epstopdf)             Output file: <./figures/luh_logo-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-06-05 14:23:16
-(epstopdf)                    size: 14806 bytes
-(epstopdf)             Command: <repstopdf --outfile=./figures/luh_logo-eps-con
-verted-to.pdf ./figures/luh_logo.eps>
-(epstopdf)             \includegraphics on input line 63.
-Package epstopdf Info: Output file is already uptodate.
+(Font)              scaled to size 6.43204pt on input line 70.
 
-<./figures/luh_logo-eps-converted-to.pdf, id=32, 455.7025pt x 132.495pt>
-File: ./figures/luh_logo-eps-converted-to.pdf Graphic file (type pdf)
+<./figures/luh_logo.pdf, id=36, 455.7025pt x 132.495pt>
+File: ./figures/luh_logo.pdf Graphic file (type pdf)
 
-<use ./figures/luh_logo-eps-converted-to.pdf>
-Package pdftex.def Info: ./figures/luh_logo-eps-converted-to.pdf used on input 
-line 63.
+<use ./figures/luh_logo.pdf>
+Package pdftex.def Info: ./figures/luh_logo.pdf used on input line 73.
 (pdftex.def)             Requested size: 142.26378pt x 41.36414pt.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 63.
+(Font)              scaled to size 13.82408pt on input line 73.
 
 
 Class scrartcl Warning: Usage of deprecated font command `\bf'!
@@ -1715,12 +1788,12 @@ Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\bf' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 63.
+(scrartcl)              by `\normalfont \bfseries ' on input line 73.
 
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 13.82408pt on input line 63.
+(Font)              scaled to size 13.82408pt on input line 73.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 19.91054pt on input line 63.
+(Font)              scaled to size 19.91054pt on input line 73.
 
 Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              You should note, that in 1994 font command `\bf' has
@@ -1733,173 +1806,87 @@ Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\bf' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 63.
+(scrartcl)              by `\normalfont \bfseries ' on input line 73.
 
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 11.52008pt on input line 63.
+(Font)              scaled to size 11.52008pt on input line 73.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 63.
+(Font)              scaled to size 13.82408pt on input line 73.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 63.
+(Font)              scaled to size 9.60007pt on input line 73.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 63.
+(Font)              scaled to size 6.72005pt on input line 73.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 13.82408pt on input line 63.
+(Font)              scaled to size 13.82408pt on input line 73.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 9.60007pt on input line 63.
+(Font)              scaled to size 9.60007pt on input line 73.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 6.72005pt on input line 63.
+(Font)              scaled to size 6.72005pt on input line 73.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 63.
+(Font)              scaled to size 13.82408pt on input line 73.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 63.
+(Font)              scaled to size 9.60007pt on input line 73.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 63.
+(Font)              scaled to size 6.72005pt on input line 73.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 63.
+(Font)              scaled to size 13.82408pt on input line 73.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 63.
+(Font)              scaled to size 9.60007pt on input line 73.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 63.
+(Font)              scaled to size 6.72005pt on input line 73.
 LaTeX Font Info:    Font shape `OT1/cmss/m/n' will be
-(Font)              scaled to size 14.96161pt on input line 63.
+(Font)              scaled to size 14.96161pt on input line 73.
 LaTeX Font Info:    Font shape `OT1/cmss/m/n' will be
-(Font)              scaled to size 10.39001pt on input line 63.
+(Font)              scaled to size 10.39001pt on input line 73.
 LaTeX Font Info:    Font shape `OT1/cmss/m/n' will be
-(Font)              scaled to size 7.27301pt on input line 63.
+(Font)              scaled to size 7.27301pt on input line 73.
 LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
-(Font)              scaled to size 15.43687pt on input line 63.
+(Font)              scaled to size 15.43687pt on input line 73.
 LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
-(Font)              scaled to size 10.72006pt on input line 63.
+(Font)              scaled to size 10.72006pt on input line 73.
 LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
-(Font)              scaled to size 7.50404pt on input line 63.
+(Font)              scaled to size 7.50404pt on input line 73.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 63.
+(Font)              scaled to size 13.82408pt on input line 73.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 63.
+(Font)              scaled to size 9.60007pt on input line 73.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 63.
+(Font)              scaled to size 6.72005pt on input line 73.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 63.
+(Font)              scaled to size 13.82408pt on input line 73.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 63.
+(Font)              scaled to size 9.60007pt on input line 73.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 63.
+(Font)              scaled to size 6.72005pt on input line 73.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 63.
+(Font)              scaled to size 13.82408pt on input line 73.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 63.
+(Font)              scaled to size 9.60007pt on input line 73.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 63.
-Package biblatex Info: Resetting trackers on input line 64.
-LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
-(Font)              scaled to size 11.37706pt on input line 64.
-LaTeX Font Info:    Font shape `T1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `T1/cmss/bx/n' tried instead on input line 64.
-LaTeX Font Info:    Font shape `T1/cmss/bx/n' will be
-(Font)              scaled to size 11.37706pt on input line 64.
-LaTeX Font Info:    Font shape `T1/cmss/b/n' in size <14.4> not available
-(Font)              Font shape `T1/cmss/bx/n' tried instead on input line 64.
-LaTeX Font Info:    Font shape `T1/cmss/bx/n' will be
-(Font)              scaled to size 14.96161pt on input line 64.
-
-Class scrartcl Warning: Usage of deprecated font command `\bf'!
-(scrartcl)              You should note, that in 1994 font command `\bf' has
-(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
-(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrartcl)              shouldn't use such commands any longer and within
-(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrartcl)              See `fntguide.pdf' for more information about
-(scrartcl)              recommended font commands.
-(scrartcl)              Note also, that KOMA-Script will remove the definition
-(scrartcl)              of `\bf' anytime until release of about version 3.20.
-(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 64.
-
-LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
-(Font)              scaled to size 10.51207pt on input line 65.
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 77.
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 77.
-Package biblatex Info: Resetting trackers on input line 80.
-
-Class scrartcl Warning: Usage of deprecated font command `\bf'!
-(scrartcl)              You should note, that in 1994 font command `\bf' has
-(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
-(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrartcl)              shouldn't use such commands any longer and within
-(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrartcl)              See `fntguide.pdf' for more information about
-(scrartcl)              recommended font commands.
-(scrartcl)              Note also, that KOMA-Script will remove the definition
-(scrartcl)              of `\bf' anytime until release of about version 3.20.
-(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 80.
-
-<./figures/quantum_well_types.pdf, id=33, 403.5075pt x 128.48pt>
-File: ./figures/quantum_well_types.pdf Graphic file (type pdf)
-
-<use ./figures/quantum_well_types.pdf>
-Package pdftex.def Info: ./figures/quantum_well_types.pdf used on input line 83
-.
-(pdftex.def)             Requested size: 418.25555pt x 133.1769pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-Package biblatex Info: Resetting trackers on input line 91.
-
-Class scrartcl Warning: Usage of deprecated font command `\bf'!
-(scrartcl)              You should note, that in 1994 font command `\bf' has
-(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
-(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrartcl)              shouldn't use such commands any longer and within
-(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrartcl)              See `fntguide.pdf' for more information about
-(scrartcl)              recommended font commands.
-(scrartcl)              Note also, that KOMA-Script will remove the definition
-(scrartcl)              of `\bf' anytime until release of about version 3.20.
-(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 91.
-
-Package epstopdf Info: Source file: <./figures/samplegaas_spatial_bandstructure
-.eps>
-(epstopdf)                    date: 2016-05-14 17:49:21
-(epstopdf)                    size: 124429 bytes
-(epstopdf)             Output file: <./figures/samplegaas_spatial_bandstructure
--eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-14 17:50:17
-(epstopdf)                    size: 38467 bytes
-(epstopdf)             Command: <repstopdf --outfile=./figures/samplegaas_spati
-al_bandstructure-eps-converted-to.pdf ./figures/samplegaas_spatial_bandstructur
-e.eps>
-(epstopdf)             \includegraphics on input line 94.
-Package epstopdf Info: Output file is already uptodate.
-
-<./figures/samplegaas_spatial_bandstructure-eps-converted-to.pdf, id=36, 411.53
-75pt x 287.0725pt>
-File: ./figures/samplegaas_spatial_bandstructure-eps-converted-to.pdf Graphic f
-ile (type pdf)
-
-<use ./figures/samplegaas_spatial_bandstructure-eps-converted-to.pdf>
-Package pdftex.def Info: ./figures/samplegaas_spatial_bandstructure-eps-convert
-ed-to.pdf used on input line 94.
-(pdftex.def)             Requested size: 418.25555pt x 291.75877pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 114.
+(Font)              scaled to size 6.72005pt on input line 73.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 73.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 73.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 73.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 73.
 [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-design size mismatch in local font md-chro8t in virtual font mdbchro8t.vf ignor
-ed. <./figures/luh_logo-eps-converted-to.pdf>]
-Package biblatex Info: Resetting trackers on input line 119.
-
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures/luh_logo.pdf>]
+Package biblatex Info: Resetting trackers on input line 74.
+LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
+(Font)              scaled to size 11.37706pt on input line 74.
+LaTeX Font Info:    Font shape `T1/cmss/b/n' in size <10.95> not available
+(Font)              Font shape `T1/cmss/bx/n' tried instead on input line 74.
+LaTeX Font Info:    Font shape `T1/cmss/bx/n' will be
+(Font)              scaled to size 11.37706pt on input line 74.
+LaTeX Font Info:    Font shape `T1/cmss/b/n' in size <14.4> not available
+(Font)              Font shape `T1/cmss/bx/n' tried instead on input line 74.
+LaTeX Font Info:    Font shape `T1/cmss/bx/n' will be
+(Font)              scaled to size 14.96161pt on input line 74.
 
 Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              You should note, that in 1994 font command `\bf' has
@@ -1912,33 +1899,71 @@ Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\bf' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 119.
+(scrartcl)              by `\normalfont \bfseries ' on input line 74.
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 74.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 74.
+LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
+(Font)              scaled to size 10.51207pt on input line 75.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 125.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 125.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 8.64006pt on input line 125.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 125.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 125.
-LaTeX Font Info:    Font shape `OT1/cmss/m/n' will be
-(Font)              scaled to size 9.35101pt on input line 125.
-LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
-(Font)              scaled to size 9.64806pt on input line 125.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 125.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 125.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 125.
-LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 8.64006pt on input line 125.
-[2 <./figures/quantum_well_types.pdf> <./figures/samplegaas_spatial_bandstructu
-re-eps-converted-to.pdf>] [3]
-Package biblatex Info: Resetting trackers on input line 187.
+(Font)              scaled to size 7.68005pt on input line 87.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 87.
+<./figures/lasing_pvac.pdf, id=47, 252.8794pt x 196.87015pt>
+File: ./figures/lasing_pvac.pdf Graphic file (type pdf)
+
+<use ./figures/lasing_pvac.pdf>
+Package pdftex.def Info: ./figures/lasing_pvac.pdf used on input line 130.
+(pdftex.def)             Requested size: 209.12778pt x 162.81036pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 142.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 142.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 142.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 142.
+ [2
+design size mismatch in local font md-chro8t in virtual font mdbchro8t.vf ignor
+ed.]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 143.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 143.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 143.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 143.
+ [3 <./figures/lasing_pvac.pdf>]
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 146.
+
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 146.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 146.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 146.
+<./figures/slope_efficiency.pdf, id=76, 476.98201pt x 476.98201pt>
+File: ./figures/slope_efficiency.pdf Graphic file (type pdf)
+
+<use ./figures/slope_efficiency.pdf>
+Package pdftex.def Info: ./figures/slope_efficiency.pdf used on input line 156.
+
+(pdftex.def)             Requested size: 418.25555pt x 418.26071pt.
 
 
 Class scrartcl Warning: Usage of deprecated font command `\bf'!
@@ -1952,21 +1977,145 @@ Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\bf' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 187.
+(scrartcl)              by `\normalfont \bfseries ' on input line 170.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 170.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 170.
+<./figures/findlay_clay.pdf, id=78, 476.98201pt x 291.97081pt>
+File: ./figures/findlay_clay.pdf Graphic file (type pdf)
+
+<use ./figures/findlay_clay.pdf>
+Package pdftex.def Info: ./figures/findlay_clay.pdf used on input line 179.
+(pdftex.def)             Requested size: 418.25555pt x 256.02626pt.
 
 
-Overfull \hbox (1.14119pt too wide) in paragraph at lines 189--193
-\T1/mdbch/m/n/10.95 abkühlen wird natür-liches, flüs-siges He-lium ver-wen-det.
- Eine Tur-bo-moleku-larpumpe erzeugt,
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 184.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 184.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 184.
+<./figures/relaxationsschwingung.pdf, id=80, 286.25134pt x 270.94885pt>
+File: ./figures/relaxationsschwingung.pdf Graphic file (type pdf)
+
+<use ./figures/relaxationsschwingung.pdf>
+Package pdftex.def Info: ./figures/relaxationsschwingung.pdf used on input line
+ 196.
+(pdftex.def)             Requested size: 204.12778pt x 193.2143pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
+[][]\T1/mdbch/m/n/10.95 Frequenz der Re-la-xa-ti-ons-
  []
 
 
-Overfull \hbox (2.70705pt too wide) in paragraph at lines 194--203
-[]\T1/mdbch/m/n/10.95 Der Laser ar-beitet bei einer Wellen-länge un-ter-halb de
-s di-rek-ten Band-übergangs von [][]
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
+\T1/mdbch/m/n/10.95 schwin-gun-gen als Funk-ti-on
  []
 
-Package biblatex Info: Resetting trackers on input line 240.
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
+\T1/mdbch/m/n/10.95 der Pump-leis-tung. Die Un-
+ []
+
+
+Underfull \hbox (badness 3735) in paragraph at lines 196--196
+\T1/mdbch/m/n/10.95 si-cher-hei-ten er-ga-ben sich je
+ []
+
+File: ./figures/relaxationsschwingung.pdf Graphic file (type pdf)
+<use ./figures/relaxationsschwingung.pdf>
+Package pdftex.def Info: ./figures/relaxationsschwingung.pdf used on input line
+ 196.
+(pdftex.def)             Requested size: 204.12778pt x 193.2143pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
+[][]\T1/mdbch/m/n/10.95 Frequenz der Re-la-xa-ti-ons-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
+\T1/mdbch/m/n/10.95 schwin-gun-gen als Funk-ti-on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
+\T1/mdbch/m/n/10.95 der Pump-leis-tung. Die Un-
+ []
+
+
+Underfull \hbox (badness 3735) in paragraph at lines 196--196
+\T1/mdbch/m/n/10.95 si-cher-hei-ten er-ga-ben sich je
+ []
+
+<./figures/relaxation_osci.jpg, id=81, 863.225pt x 637.38126pt>
+File: ./figures/relaxation_osci.jpg Graphic file (type jpg)
+
+<use ./figures/relaxation_osci.jpg>
+Package pdftex.def Info: ./figures/relaxation_osci.jpg used on input line 203.
+(pdftex.def)             Requested size: 204.12778pt x 150.71828pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--203
+[][]\T1/mdbch/m/n/10.95 Anzeige des Os-zil-lo-skops
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--203
+\T1/mdbch/m/n/10.95 mit den be-ob-ach-te-ten Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--203
+\T1/mdbch/m/n/10.95 la-xa-ti-ons-schwin-gun-gen bei
+ []
+
+
+Underfull \hbox (badness 1019) in paragraph at lines 203--203
+\T1/mdbch/m/n/10.95 der an den AOM an-ge-leg-ten
+ []
+
+File: ./figures/relaxation_osci.jpg Graphic file (type jpg)
+<use ./figures/relaxation_osci.jpg>
+Package pdftex.def Info: ./figures/relaxation_osci.jpg used on input line 203.
+(pdftex.def)             Requested size: 204.12778pt x 150.71828pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--203
+[][]\T1/mdbch/m/n/10.95 Anzeige des Os-zil-lo-skops
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--203
+\T1/mdbch/m/n/10.95 mit den be-ob-ach-te-ten Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--203
+\T1/mdbch/m/n/10.95 la-xa-ti-ons-schwin-gun-gen bei
+ []
+
+
+Underfull \hbox (badness 1019) in paragraph at lines 203--203
+\T1/mdbch/m/n/10.95 der an den AOM an-ge-leg-ten
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              You should note, that in 1994 font command `\bf' has
@@ -1979,13 +2128,145 @@ Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\bf' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 240.
+(scrartcl)              by `\normalfont \bfseries ' on input line 208.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 208.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 208.
+<./figures/tem10.JPG, id=84, 301.125pt x 200.75pt>
+File: ./figures/tem10.JPG Graphic file (type jpg)
+ <use ./figures/tem10.JPG>
+Package pdftex.def Info: ./figures/tem10.JPG used on input line 221.
+(pdftex.def)             Requested size: 204.12778pt x 136.09158pt.
+File: ./figures/tem10.JPG Graphic file (type jpg)
+
+<use ./figures/tem10.JPG>
+Package pdftex.def Info: ./figures/tem10.JPG used on input line 221.
+(pdftex.def)             Requested size: 204.12778pt x 136.09158pt.
+ <./figures/tem20.JPG, id=85, 361.35pt x 240.9pt>
+File: ./figures/tem20.JPG Graphic file (type jpg)
+
+<use ./figures/tem20.JPG>
+Package pdftex.def Info: ./figures/tem20.JPG used on input line 227.
+(pdftex.def)             Requested size: 204.12778pt x 136.08669pt.
+File: ./figures/tem20.JPG Graphic file (type jpg)
+ <use ./figures/tem20.JPG>
+Package pdftex.def Info: ./figures/tem20.JPG used on input line 227.
+(pdftex.def)             Requested size: 204.12778pt x 136.08669pt.
 
 
-Underfull \vbox (badness 2173) has occurred while \output is active []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- [4]
-Package biblatex Info: Resetting trackers on input line 270.
+Package biblatex Info: Resetting trackers on input line 231.
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 231.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 231.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 231.
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 232.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 232.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 232.
+<./figures/angle_shg.pdf, id=86, 239.03845pt x 231.74239pt>
+File: ./figures/angle_shg.pdf Graphic file (type pdf)
+
+<use ./figures/angle_shg.pdf>
+Package pdftex.def Info: ./figures/angle_shg.pdf used on input line 248.
+(pdftex.def)             Requested size: 204.12778pt x 197.90134pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--248
+[][]\T1/mdbch/m/n/10.95 Transversalwinkelabhängigkeit
+ []
+
+
+Underfull \hbox (badness 3407) in paragraph at lines 248--248
+\T1/mdbch/m/n/10.95 SH-Intentensität. Die Funk-ti-
+ []
+
+
+Underfull \hbox (badness 3343) in paragraph at lines 248--248
+\T1/mdbch/m/n/10.95 on ist sym-me-trisch er-war-tet
+ []
+
+
+Underfull \hbox (badness 5548) in paragraph at lines 248--248
+\T1/mdbch/m/n/10.95 wor-den. Ver-mut-lich hat die
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--248
+\T1/mdbch/m/n/10.95 beim Ro-tie-ren des Kris-talls
+ []
+
+File: ./figures/angle_shg.pdf Graphic file (type pdf)
+<use ./figures/angle_shg.pdf>
+Package pdftex.def Info: ./figures/angle_shg.pdf used on input line 248.
+(pdftex.def)             Requested size: 204.12778pt x 197.90134pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--248
+[][]\T1/mdbch/m/n/10.95 Transversalwinkelabhängigkeit
+ []
+
+
+Underfull \hbox (badness 3407) in paragraph at lines 248--248
+\T1/mdbch/m/n/10.95 SH-Intentensität. Die Funk-ti-
+ []
+
+
+Underfull \hbox (badness 3343) in paragraph at lines 248--248
+\T1/mdbch/m/n/10.95 on ist sym-me-trisch er-war-tet
+ []
+
+
+Underfull \hbox (badness 5548) in paragraph at lines 248--248
+\T1/mdbch/m/n/10.95 wor-den. Ver-mut-lich hat die
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--248
+\T1/mdbch/m/n/10.95 beim Ro-tie-ren des Kris-talls
+ []
+
+
+Underfull \hbox (badness 7486) in paragraph at lines 263--263
+\T1/mdbch/m/n/10.95 bei Fo-kus-sie-rung in den BBO
+ []
+
+
+Underfull \hbox (badness 7486) in paragraph at lines 263--263
+\T1/mdbch/m/n/10.95 bei Fo-kus-sie-rung in den BBO
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Class scrartcl Warning: Usage of deprecated font command `\bf'!
@@ -1999,72 +2280,114 @@ Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\bf' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 270.
+(scrartcl)              by `\normalfont \bfseries ' on input line 268.
 
-LaTeX Font Info:    Try loading font information for TS1+mdbch on input line 29
-2.
-(/usr/share/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
-File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
-)
-LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 292.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 268.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 268.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 281.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 281.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 281.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 281.
+[4]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 281.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 281.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 281.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 281.
+ [5 <./figures/slope_efficiency.pdf>]
+<./figures/beam_div.pdf, id=135, 570.93298pt x 426.39299pt>
+File: ./figures/beam_div.pdf Graphic file (type pdf)
+
+<use ./figures/beam_div.pdf>
+Package pdftex.def Info: ./figures/beam_div.pdf used on input line 307.
+(pdftex.def)             Requested size: 418.25555pt x 312.37685pt.
 
 
-Class scrartcl Warning: Usage of deprecated font command `\bf'!
-(scrartcl)              You should note, that in 1994 font command `\bf' has
-(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
-(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrartcl)              shouldn't use such commands any longer and within
-(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrartcl)              See `fntguide.pdf' for more information about
-(scrartcl)              recommended font commands.
-(scrartcl)              Note also, that KOMA-Script will remove the definition
-(scrartcl)              of `\bf' anytime until release of about version 3.20.
-(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 301.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5]
-LaTeX Font Info:    Font shape `T1/mdbch/m/fsc' will be
-(Font)              scaled to size 10.51207pt on input line 301.
-LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
-(Font)              scaled to size 11.73846pt on input line 301.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 304.
- [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 304.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 319.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 319.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 319.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 319.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 319.
+[6 <./figures/findlay_clay.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 319.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 319.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 319.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 319.
+ [7 <./figures/relaxationsschwingung.pdf> <./figures/relaxation_osci.jpg> <./fi
+gures/tem10.JPG> <./figures/tem20.JPG>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 319.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 319.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 319.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 319.
+
+[8 <./figures/angle_shg.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 319.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 319.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 319.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 319.
+ [9 <./figures/beam_div.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 319.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 304.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 304.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 319.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 319.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 711418B2EE1F00B928E7C8FF85852D84;375.
+(rerunfilecheck)             Checksum: 91EC4892BD1CB736A70F60A341F1EB13;622.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26367 strings out of 493054
- 495907 string characters out of 6140586
- 954467 words of memory out of 5000000
- 29502 multiletter control sequences out of 15000+600000
- 79976 words of font info for 163 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 57i,19n,58p,10395b,1542s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
-exmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/share/texmf-dist/fonts/type1/b
-itstrea/charter/bchb8a.pfb></usr/share/texmf-dist/fonts/type1/bitstrea/charter/
-bchr8a.pfb></usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr
-/share/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texmf-di
-st/fonts/type1/public/mathdesign/mdbch/md-chr7m.pfb></usr/share/texmf-dist/font
-s/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/share/texmf-dist/fonts/type1
-/public/mathdesign/mdbch/md-chr7v.pfb></usr/share/texmf-dist/fonts/type1/public
-/mathdesign/mdbch/md-chr7y.pfb></usr/share/texmf-dist/fonts/type1/public/mathde
-sign/mdbch/md-chr8c.pfb></usr/share/texmf-dist/fonts/type1/public/mathdesign/md
-bch/md-chr8t.pfb></usr/share/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-
-chri7m.pfb></usr/share/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chrma.
-pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on main.pdf (6 pages, 177353 bytes).
+ 27625 strings out of 493054
+ 516681 string characters out of 6140586
+ 1000315 words of memory out of 5000000
+ 30738 multiletter control sequences out of 15000+600000
+ 58576 words of font info for 125 fonts, out of 8000000 for 9000
+ 1145 hyphenation exceptions out of 8191
+ 59i,19n,100p,10395b,1400s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{cite.0@gaussbeamwiki} has been referenced but doe
+s not exist, replaced by a fixed one
+
+{/usr/share/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/share/texmf-dist/
+fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texmf-dist/fonts/type1/bits
+trea/charter/bchr8a.pfb></usr/share/texmf-dist/fonts/type1/bitstrea/charter/bch
+r8a.pfb></usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/share/te
+xmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.pfb></usr/share/texmf-dis
+t/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/share/texmf-dist/fonts
+/type1/public/mathdesign/mdbch/md-chr8c.pfb></usr/share/texmf-dist/fonts/type1/
+public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texmf-dist/fonts/type1/public/
+mathdesign/mdbch/md-chri7m.pfb>
+Output written on main.pdf (9 pages, 431400 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 137 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 72 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 266 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 115 words of extra memory for PDF output out of 10000 (max. 10000000)
 

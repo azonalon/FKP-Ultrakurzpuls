@@ -1,6 +1,6 @@
 \documentclass[11pt,twoside=true]{scrartcl}
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
+\usepackage[english, ngerman]{babel}
 \usepackage{amsmath,amsthm,verbatim,amssymb,amsfonts,amscd, graphicx}
 \usepackage{graphicx}
 \usepackage{siunitx}
@@ -21,8 +21,15 @@
 
 \addbibresource{sources.bib}
 
+%% floatrow
+\usepackage{floatrow}
+\floatsetup{valign=c, heightadjust=all}
+\newfloatcommand{capbtabbox}{table}[][\FBwidth]
+%%
+
 %% MATH COMMANDS
 \newcommand{\dd}[2]{\frac{d{#1}}{d{#2}}}
+\newcommand{\e}{\mathrm{e}}
 
 \usepackage[%
   bookmarks, % Create bookmarks
@@ -35,6 +42,7 @@
   hyperfootnotes=true, % Hyperlinks for footnotes
   hyperindex=true, % Indexeinträage verweisen auf Text
 ]{hyperref}
+\usepackage{wrapfig}
 
 
 \setkomafont{section}{ \LARGE\bf }
@@ -45,23 +53,25 @@
 
 
 \titlehead{
-    \includegraphics[width=5cm]{./figures/luh_logo.eps}
+    \includegraphics[width=5cm]{./figures/luh_logo.pdf}
   
 }
+
 \title{Praktikumsbericht}
 \subtitle{Erzeugung ultrakurzer Laserpulse (IQ 7)}
 \author{Jonathan Rossberg,
       Eduard Sauter}
 \date{\today}
 \dedication{Praktikum im Rahmen der Vorlesung Koheränte Optik im
-Sommersemester 2016}
+Sommersemester 2016 \\
+Betreuer: Bernhard Kreipe}
 
 
 \begin{document}
 
 \maketitle
-
-\section{Theory}
+\newpage
+\section{Dauerstrichbetrieb}
 \textsl{Bestimmen sie den theoretischen Verlauf der $g_0-P$ Kennlinie} 
 %
 Die Ratengleichungen lauten.
@@ -75,230 +85,235 @@ Die Ratengleichungen lauten.
     + \underbrace{2 g P_\text{vac}}_{\text{Spontane Emission}}  
     - \underbrace{\frac{P}{T_p}}_{\text{Lineare Verluste}}
 \end{align*}
+
+
+Im Dauerstrichbetrieb sind $\dd{g}{t} = \dd{P}{t} = 0$. 
+Man erhält dann
+%
+\begin{align*}
+  2 g_s P_s  & = \frac{P_s}{T_p} - 2 g_S P_\text{vac} \\
+  - \frac{g_0}{T_L}  & = g_s\left( \frac{P_s}{P_\text{sat}} - \frac{1}{T_L} \right) \\
+  & \iff  \\
+  g_s & = \frac{1}{2 T_p} \frac{1}{1- \frac{P_\text{vac}}{P_S}} = \frac{g_0}{1 - \frac{P_S T_L}{P_\text{sat}}} \\
+  & \iff   \\
+  \left( 1 - \frac{P_S T_L}{P_\text{sat}} \right)  & = g_0 2 T_p \left( 1 - \frac{P_\text{vac}}{P_S} \right) \\
+  & \iff  \\
+  0 & = P_s^2 + P_s (2 g_0 T_p - 1) \frac{P_\text{sat}}{T_L} - \frac{P_\text{vac}P_\text{sat}}{T_L}
+  & \iff \\
+  P_S & = - \frac{\gamma}{2} \pm \sqrt{\frac{\gamma^2}{4} + \delta}
+\end{align*}
+Mit 
+%
+\begin{align*}
+  \gamma = \frac{P_\text{sat}}{T_L} (2 g_0 T_p - 1) && \delta = \frac{P_\text{vac} P_\text{sat}}{T_L}
+\end{align*}
+%
+Die Form dieser Kennlinien sind in Abbildung \ref{fig:lasing_pvac} dargestellt.
+%
+Für $P_\text{vac} = 0 $, also vernachlässigung von spontaner Emission ergibt sich
+%
+\begin{align*}
+  P_s = \frac{P_\text{sat}}{T_L} (2 g_0 T_p - 1) && g_s = \frac{1}{2 T_p}
+\end{align*}
 %
 
-\section{The Potential Well Model}
+
+Die Lasingbedingung ist in diesem Fall eine positive stationäre Leistung
+$P_s > 0$ und führt zu
+%
+\begin{align*}
+  g_0 T_p > \frac{1}{2}
+\end{align*}
+%
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{./figures/lasing_pvac.pdf}
+  \caption{Laserkennlinie für verschiedene koeffizienten der spontanten
+  Emission}
+  \label{fig:lasing_pvac}
+\end{figure}
+
+Bei gegebenem Gesamtverbrauch $g_s=l$ ist dann außerdem die Lebenszeit der Photonen
+pro Resonatorumlauf $T_p = \frac{1}{2 l}$. 
+
+Man aus den Ratengleichungen qualitativ sehen, dass bei einer Störung von $P'<P$
+der Gewinn größer wird und dadurch auch $P'' > P'$. Das System ist also stabil unter
+Störung von $P$ durch z.B. einen akusto-optischen Modulator (siehe kommenden Abschnitt).
+
+\newpage
+
+
+\subsection{Schwellenstrom und Slope-Efficiency}
+Zuerst wird der Laser mit einem hochreflektierenden Spiegel ($R > 0.99$) betrieben.
+Die Ausgangsleistung des Lasers wurde in abhängigkeit des Pumpstroms mit einem 
+Thermischen Leistungsmesskopf ermittelt. Danach wurde der Strahl des Pumplasers
+ausgekoppelt und dasselbe für den Pumplaser wiederholt, um dann durch den Fit
+aus dem ersten Graphen den differentiellen Wirkungsgrad zu erhalten. Beide
+Messungen sind in Abbildung \ref{fig:slope_efficiency} veranschaulicht.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1\textwidth]{./figures/slope_efficiency.pdf}
+  \caption{Differentieller Wirkungsgrad. An der ersten Kurve erkennt man
+  dass der Laser erst bei der Schwelle des Pumplasers Leistung gewinnt. Im
+  unteren Graphen ist dieser Effekt nicht mehr zu sehen da die echte
+  Pumpleistung als Argument aufgetragen worden ist. An dem unteren Graphen
+  sieht man, dass die Lösung der Ratengleichung für einen kleinen Wert von
+  $P_\text{vac}$ einen guten Fit für die Laserleistung liefert. Dies ist auch
+  durch den hochreflektierenden Auskoppelspiegel begründet, durch den die
+  spontante Emission entscheidender wird.  Für kleine Intensitäten ist der
+  verwendete thermische Messkopf nicht sensitiv genug gewesen.}
+
+  \label{fig:slope_efficiency}
+\end{figure}
+
+\subsection{Auskopplungsstärke}
+Der hochreflektierende Auskoppler ist in diesem Versuch durch andere Auskoppelspiegel
+mit definierten Transmissionswerten ausgetauscht worden. Aus den $P-I$  Diagrammen
+wurden die Schwelleistungen durch lineare extrapolation bei Größeren Pumpleistungen
+ermittelt. Diese Schwelleistungen sind in Findlay-Clay darstellung in Abbildung
+\ref{fig:findlay_clay} zu sehen. Die Verluste pro Rundgang sind das Verhältnis
+der Fitkoeffizienten und sie ergeben sich zu \SI{65}{\percent}. 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=1\textwidth]{./figures/quantum_well_types}
-  \caption{Comparison between the different Band Edge alignments in Quantum 
-  Wells. Taken from \cite{yucardona}}
-  \label{fig:quantum_well_types}
+  \includegraphics[width=1\textwidth]{./figures/findlay_clay.pdf}
+  \caption{Findlay-Clay darstellung der Laserschwellen}
+  \label{fig:findlay_clay}
+\end{figure}
+
+\subsection{Störung des stabilen Betriebs}
+Mithilfe eines Opto-Akustischen Modulators kann der stabile Laserbetrieb gestört
+werden. Der AOM ändert seinen Brechungsindex je nach angelegter Spannung. In unserem 
+Fall wurde mit einem Frequenzgenerator eine Rechtecksfunktion erzeugt, die man
+in Abbildung \ref{fig:relaxation_osci} sehen kann.
+\begin{figure}[h!]
+  \begin{floatrow}
+    \ffigbox{
+      \includegraphics[width=\linewidth]{./figures/relaxationsschwingung.pdf}
+    } {
+      \caption{Frequenz der Relaxationsschwingungen als Funktion der Pumpleistung. Die Unsicherheiten
+      ergaben sich je nachdem wieviele Perioden auf dem Display abgelesen werden konnten}
+    }
+    \ffigbox{
+      \includegraphics[width=\linewidth]{./figures/relaxation_osci.jpg}
+      \label{fig:relaxation_osci}
+    } {
+      \caption{Anzeige des Oszilloskops mit den beobachteten Relaxationsschwingungen bei
+      der an den AOM angelegten Rechtecksfunktion.}
+    }
+  \end{floatrow}
+\end{figure}
+
+
+\subsection{Transversale Moden}
+Bei nicht optimaler justierung waren auch andere Moden zu erkennen als die 
+Grundmode $\text{TEM}_{00}$. Sie wurden mit einer Handykamera abfotografiert und
+für Abbildung \ref{fig:tem10} und \ref{fig:tem20} nachbearbeitet. Es wurden 
+Hermite-Moden beobachtet, was für eine rechteckige Symmetrie des Lasers spricht. 
+
+\begin{figure}[h!]
+  \begin{floatrow}
+    \ffigbox{
+      \includegraphics[width=\linewidth]{./figures/tem10.JPG}
+    } {
+      \caption{TEM$_{10}$ Mode}
+      \label{fig:tem10}
+    }
+    \ffigbox{
+      \includegraphics[width=\linewidth]{./figures/tem20.JPG}
+    } {
+      \caption{TEM$_{30}$ Mode}
+      \label{fig:tem20}
+    }
+  \end{floatrow}
+\end{figure}
+
+\section{Erzeugung der 2. Harmonischen}
+\subsection{Intensität und Fokushärte}
+Die Intensität des Frequenzverdoppelten Strahls wurde mithilfe eines
+Photomultipliers vermessen. Der vorhandene thermische Messkopf zur Leistungsmessung
+war nicht sensitiv genug um damit die Leistung direkt zu vermessen zu können.
+
+
+\begin{figure}[h!]
+  \begin{floatrow}
+    \ffigbox{
+      \includegraphics[width=\linewidth]{./figures/angle_shg.pdf}
+    }
+    {%
+      \caption{Transversalwinkelabhängigkeit SH-Intentensität. Die Funktion
+      ist symmetrisch erwartet worden. Vermutlich hat die Verschiebung vom Fokus
+      weg beim Rotieren des Kristalls diese Symmetrie gebrochen. }
+      \label{fig:angle_shg}
+    }
+    \capbtabbox{%
+      \begin{tabular}{c c c c c c}
+        \hline\hline
+        Brennweite $f$ in \SI{}{\milli\metre} & Intensität in w. E. \\
+        \hline
+        30 & 150 \\
+        40 & 145.2 \\
+        80 & 134.2 \\
+        100 & 117 \\
+        \hline\hline
+      \end{tabular}
+    }{%
+      \caption{Stärke der zweiten Harmonischen unter verschiedenen Brennweiten
+    bei Fokussierung in den BBO Kristall.}
+    }
+  \end{floatrow}
+  \end{figure}
+  
+
+\subsection{Strahlradius im Fokus mit Rasierklingenmethode}
+Die Intensität des Gaußschen strahls kann durch
+%
+\begin{align*}
+  I(r, z) = I_0\left( \frac{w_0}{w(z)} \right)^2 \e^{\frac{-2 r^2}{w^2(z)}}
+\end{align*}
+%
+beschrieben werden. Dabei ist der Strahlradius der Punkt an
+dem die Transversale funktion auf $1/\e^2$ abgefallen ist. Sie ist 
+nach \cite{gaussbeamwiki} gegeben durch
+%
+\begin{align*}
+  w(z) = w_0 \sqrt{1 + \left( \frac{z}{z_R} \right)^2} && z_R = \frac{\pi w_0^2}{\lambda}
+\end{align*}
+%
+für große $|z|$ ist der Verlauf in guter Näherung linear,
+%
+\begin{align*}
+  w(z) \approx w_0 \frac{z}{z_R} = \frac{\lambda z}{w_0 \pi} = \sin{\theta} 
+                      \overset{\theta \ll 1}{\approx} \theta
+\end{align*}
+%
+man kann also durch die Steigung experimentell den Strahldurchmesser
+am Fokuspunkt ermitteln. Für kleine Werte ist diese gleich dem Divergenzwinkel
+$\theta$. 
+
+Um den Strahldurchmesser zu bestimmen wird eine Rasierklinge horizontal und
+vertikal durch den Strahl gefahren. Der Intensitätsverlauf hinter der Klinge
+entspricht einem Integral über eine Gaußfunktion. Diese Funktion wurde auch
+als Fit für die Abbildungen \ref{fig:beam_div} verwendet.
+%
+\begin{align*}
+  \operatorname{erf}(x) = \int_{-\infty}^{x} e^{-\gamma^2} d\gamma
+\end{align*}
+%
+<++>
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{./figures/beam_div.pdf}
+  \caption{Strahldurchmesser und Intensitätsprofile. Der Strahl wurde mit einer
+  \SI{40}{\milli\metre} Linse fokussiert. Vor dem Fokus wurden für verschiedene 
+  Abstände zur Linse die ersichtlichen Graphen gemessen.}
+  \label{fig:beam_div}
 \end{figure}
 
 
 
-\section{Type-II Multiple Quantum Wells}
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=\textwidth]{./figures/samplegaas_spatial_bandstructure.eps}
-  \caption{
-    Lowest Energy Wave functions of Electrons and Holes with $k$-vectors close to the band edges.
-    This figure illustrates the expected spatial separation of the electron
-    and hole states. Calculated with \cite{snider19901d}
-  } 
-  \label{fig:} 
-\end{figure}
 
-Ziel dieses Versuchs ist die Messung der Spinrelaxationszeit angeregter
-Elektronen in einer n-dotierten \ce{GaAs} Probe bei niedrigen Temperaturen. 
-Laut \cite{dzhioev2002low} ist die Spinrelaxationszeit maximal bei einer
-Dotierung von etwa \SI{1e16}{\per\cubic\centi\metre}. Die dotierung der
-untersuchten Probe liegt auch in diesem Bereich.
-
-Die Beständigkeit des Spins ist interessant für Spintronische Anwendungen. Dort
-wird der Spin verwendet, um Informationen zu manipulieren, zu speichern und
-wieder abzurufen. Es ist von Vorteil, wenn diese Informationen nicht zu schnell
-verloren gehen.
-
-Die Spinrelaxationszeit wird hier mithilfe einer \emph{Hanle-Messung} bestimmt.
-Andere mögliche Bestimmungsverfahren sind zum Beispiel Spinrauschspektroskopie oder
-Zeitaufgelöste Messung.
-
-
-\section{Theorie}
-
-Im Grenzfall geringer Bestrahlungsdichten werden nur wenige Elektronen durch
-das zirkular polarisierte Licht angeregt, und folglich gibt es wenig 
-Rückkombination der entstehenden Löcher mit den optisch angeregten Elektronen.
-Vielmehr rekombinieren die Elektronen mit den reichlich vorhandenen 
-unpolarisierten Gleichgewichtselektronen \footfullcite{dzhioev2002low}. 
-
-Zusätzlich stehen Übergangswahrscheinlichkeiten vom $p$-Artigen Valenzband bei
-Anregung mit $\sigma_+$ oder $\sigma_-$ für den Übergang in die Zustände $s =
-\pm\frac{1}{2}$ des Leitungsbandes stehen in einem Ungleichgewicht. 
-
-Durch diese beiden Faktoren kann sich letztendlich ein Gleichgewicht einstellen,
-in dem es eine gewisse Ansammlung von Gesamtelektronenspin im Leitungsband gibt.
-
-Unter Einfluss des Magnetfeldes erwarten wir aufgrund der \emph{Larmor-Präzession}
-eine sich zeitlich veränderliche Projektion des Spins der Elektronen senkrecht
-zum angelegten Magnetfeld $B$ mit der \emph{Larmor-Frequenz}
-\begin{align*}
-  \Omega(B) = \frac{g \mu_B B }{\hbar}
-\end{align*}
-%
-Wir erwarten dann, dass die Gesamtpolarisation
-der Photolumineszenz dem Verlauf einer \emph{Hanle-Kurve} entspricht
-\cite{fpspindynamik}.
-%
-\begin{align*}
-  \bar{S}_Z(B) = \frac{\bar{S}_Z(0)}{1 + \left( \frac{T_S g \mu_B B}{\hbar} \right)^2}  
-\end{align*}
-%
-Wobei wir für das Interpolieren der Messwerte folgende Form verwenden
-%
-\begin{align*}
-  \frac{\bar{S}_Z(0)}{1 + \frac{(B - \Delta B)^2}{\xi^2}} + \Upsilon 
-\end{align*}
-%
-Die Verschiebung der Magnetfeldwerte $\Delta B$ könnte zum Beispiel 
-durch das nicht kompensierte Erdmagnetfeld erzeugt werden.
-
-Die \emph{Spinlebenszeit} ist proportional zur Breite der Kurve.
-%
-\begin{align} 
-  T_S = \left( \frac{1}{\tau_s} + \frac{1}{T} \right)\approx \tau_s
-  \label{eq:spinrel}
- \end{align} %
-Die letztere Näherung verwenden wir nach \cite{dzhioev2002low} unter
-der Annahme niedriger Bestrahlungsdichten.
-%
-Es ergibt sich dann nach \cite{fpspindynamik}
-%
-\begin{align*}
-  \tau_S = \frac{\hbar}{g \mu_B \xi}
-\end{align*}
-%
-Außerdem sind die Naturkonstanten \cite{mohr2012codata}:
-%
-\begin{align*}
-  \mu_B &= \SI{9.27400968(20)e-24}{\joule\per\tesla} \\
-  \hbar &= \SI{1.054 571 800(13)e-34}{\joule\second} \\
-\end{align*}
-%
-und der \emph{Landé-Faktor} in \ce{GaAs} bei niedrigen Temperaturen $T \to 0$ 
-wird aus \cite{zawadzki2008temperature} entnommen.
-%
-\begin{align*}
-  g = -0.452 
-\end{align*}
-%
-\section{Messaufbau}
-
-Die Probe wird innerhalb eines Krystostaten auf niedrige Temperaturen
-abgekühlt. Zum abkühlen wird natürliches, flüssiges Helium verwendet. Eine
-Turbomolekularpumpe erzeugt, unterstützt von einer Scrollpumpe, einen Druck
-im Größenbereich von \SI{e-8}{\milli\bar}.
-
-Der Laser arbeitet bei einer Wellenlänge unterhalb des direkten Band\-übergangs
-von \SI{815}{\nano\metre} ohne energetisch größere Übergänge der $s$-Artigen
-Valenzbandniveaus zu ermöglichen.  Um Wellenlängen über der Bandlücke zu
-unterdrücken schalten wir einen Niedrigpass Filter vor den Laser. Sie könnten
-bei der Messung störend sein, falls sie von der Probe reflektiert werden und
-durch den Hochpass Filter vor der Diode geraten. Der Hochpass Filter soll
-Reflexe niedriger Wellenlänge, welche vom Laser ausgehen können, unterdrücken.
-Zwei Justierspiegel ermöglichen die Ausrichtung des Strahlengangs auf die Höhe
-der Probe. 
-
-Um einen größeren Bereich der Probe mit geringerer Strahlungsdichte
-auszuleuchten wird der Laserstrahl mit einer Linse aufgeweitet.
-
-Die Achse des PEM wird im \SI{45}{\degree} Winkel zum Linearpolarisator
-ausgerichtet und moduliert so unter Wechselspannung die Polarisation des
-Laserstrahls Sinusförmig zwischen $\sigma_-$ und $\sigma_+$.
-
-Die Photolumineszenz wird durch eine $\lambda/4$ Platte gesendet, und so kann
-aus der Amplitude ihres durch den PEM modulierten Intensitätsverlaufes ihre
-Gesamtpolarisation bestimmt werden.
-
-Der photoelastische Modulator, ein doppelbrechender Kristall, der mit einer
-Frequenz von \SI{50}{\kilo\hertz} zusammengedrückt und ausgedehnt wird und bei
-maximaler Ausdehnung als $\lambda/4$-Plättchen wirkt, erzeugt die Oszillationen
-von links- und rechtszirkular polarisiertem Laserlicht. Damit oszilliert auch
-das Photoluminiszenzsignal zwischen links- und rechtszirkular polarisiertem
-Licht.  Dazu wird nur eine Komponente $\sigma_+$ oder $\sigma_-$ bei der
-Messung berücksichtigt. Sie wird durch den Linearpolarisator 2 herausgefiltert.
-
-Die Amplitude wird direkt mit dem Lock-In Amplifier gemessen, der seine Lock-In
-Frequenz durch den PEM erhält.  Er verstärkt schließlich das Signal und
-unterdrückt gleichzeitig Rauschanteile durch einen DC-Filter. Das Signal des
-Lock-Ins wurde am Computer gleich ausgewertet.
-
-Die Probe selbst befindet sich in einem 4He-Metall-Dewargefäß, an dessen äußere
-Kammer zwei Vakuumpumpen angeschlossen sind. In der inneren Kammer tropft
-flüssiges Helium auf einen Kupferfinger, an dem die Probe angebracht ist. Sie
-soll diese auf etwa \SI{6.5}{\kelvin} herunterkühlen.  Ein Computer regelt die
-Stromversorgung der Helmholtz-Spule, welche vorher durch ein Gauss-Meter
-kalibriert wurde. Er nimmt auch die Amplitudenwerte des Lock-In auf und erzeugt
-auf diese Weise die Messreihen des nächsten Abschnittes.  
-
-
-
-
-
-\section{Messergebnisse}
-Unsere Messungen der Spinpolarisation in Abhängigkeit vom Magnetfeld liefern
-uns die Hanle-Kurve, welche in der untenstehenden Abbildung dargestellt ist. In
-einer ersten Messung, dargestellt in der unteren der beiden Kurven, haben wir
-bei einer Laserintensität von \SI{22.5}{\milli\watt} 50 Messwerte aufgenommen
-und jeweils die Stromstärke um \SI{100}{\milli\ampere} erhöht. In einer zweiten
-Messung wurden je 50 Messwerte in kleineren Abständen von
-\SI{80}{\milli\ampere} in beide Polungsrichtungen gemessen (oberes Diagramm).
-Die Halbwertsbreiten der Hanle-Kurven der beiden Messungen liefern uns
-schließlich über Gleichung \ref{eq:spinrel} die Spinrelaxionszeit.
-$
-\tau_{s_1}=\SI{20.199 \pm 1.344}{\nano\second}
-$
-für die erste Messung und
-$
-\tau_{s_2}=\SI{25.535 \pm 0.429}{\nano\second}
-$
-für die zweite Messung.
-
-Die beiden Messungen hätten bei einer Temperatur von \SI{6.5}{\kelvin}
-stattfinden sollen. Da das Kryostat eine fehlerhafte Dichtung hatte, ist diese
-Temperatur allerdings nicht erreicht worden. Geplant waren ursprünglich auch
-noch zwei weitere Messungen mit verschiedenen Laserintensitäten. Da bei einer
-Überprüfung, ob ein Leck vorliegt, schießlich das Vakuum komplett
-zusammengebrochen ist, wurden diese beiden Messungen nicht mehr durchgeführt.
-
-
-
-
-
-\section{Diskussion der Ergebnisse}
-Wie man sieht lassen sich unsere Messdaten der Theorie entsprechend sehr gut
-durch eine Lorentz-Kurve approximieren. Vor allem die zweite Messung, in der
-wir die Stromstärke in kleineren Abständen verändert haben, zeigt geringe
-Abweichungen von deren Verlauf. Allerdings fehlen hier bei
-der Messung in negativer Stromrichtung die ersten zwei Messwerte, da die
-Sättigungsgrenze des Lock-Ins erreicht war. 
-
-Anhand der Halbwertsbreite der Hanle-Kurve haben wir also die Spinlebenszeit
-von etwa \SI{23}{\nano\second} bestimmen können. Aufgrund bisheriger
-Erfahrungen mit dem Versuchsaufbau wären allerdings Lebenszeiten
-im Bereich von bis zu \SI{100}{\nano\second} erwartet worden. Da allerdings
-aufgrund der fehlerhaften Dichtung die Temperatur der Probe \SI{6.5}{\kelvin} 
-vermutlich deutlich überschritten hat, führte Streuung der Elektronen an
-Phononen und Fehlstellen aufgrund der höheren Temperatur zu einer Verringerung
-von $\tau_s$ \cite{wu2010spin}.
-
-Auffällig ist überdies die große Verschiebung
-$\Delta$B der Hanle-Kurve um den Nullpunkt in beiden Messungen. 
-%
-Das Erdmagnetfeld wurde nicht kompensiert. Im schlimmsten Fall steht der
-magnetische Feldvektor in der Ebene senkrecht zum von der Probe reflektierten
-Strahl. Sein Betrag in Deutschland ist etwa \SI{50}{\micro\tesla}. Selbst im
-schlimmsten Fall wäre dieser Effekt also zu klein.
-%
-Wir vermuten daher, dass sich wegen vorangegangenen Anlegens eines Magnetfelds
-eine Remanenz in der Probe gebildet haben könnte. Vor allem die erste Messung,
-in der $\Delta$B besonders hoch ist, unterstützt diese These. Vor Aufnahme
-dieser Messdaten hatten wir mehrmals ein Magnetfeld in gleicher Richtung
-angelegt.
-
-\printbibliography
 
 
 \end{document}
