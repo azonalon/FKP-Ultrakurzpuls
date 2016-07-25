@@ -4,19 +4,20 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.special import erfc
 from scipy.optimize import curve_fit
-plot_config('pdf')
+#plot_config('pdf')
 
 
 def linearFit(x, a, b):
     return a * x + b
 
 def lasingFit(x, a, b, c, x0=0):
+    """ this fit approximates lasing for high and low powers """
     return (a * (x-x0) + b)/2 + np.sqrt(c * (x-x0) + (a * (x-x0) + b)**2)/2
     """ ts: speed of transition from 1 to 2
         return (a * x + b)/2 + np.sqrt(c * x + (a * x + b)**2)/2
     """
 
-    #%%
+#%%
 plt.figure(figsize=(4,3))
 plt.xticks([])
 plt.yticks([])
