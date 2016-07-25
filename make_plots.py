@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.special import erfc
 from scipy.optimize import curve_fit
-#plot_config('pdf')
+plot_config('pdf')
 
 
 def linearFit(x, a, b):
@@ -27,7 +27,7 @@ plt.ylabel("Ausgangsleistung")
 for c in np.linspace(1, 0, 5):
     plotf(lasingFit, 0, 1.2, popt=[1, -1, c**3/10], label='$%3.3g$' % (c**3/10))
 plt.legend(title='$P_\\text{vac}$ in willk. einh.', loc='best')
-plt.savefig("./figures/lasing_pvac")
+#plt.savefig("./figures/lasing_pvac")
 
 #%% P-I Diagrams with high reflective mirror
 
@@ -73,8 +73,8 @@ plt.plot(X, lasingFit(X, *po), label=label)
 plt.errorbar(PPL, PL, fmt='.', yerr=2, xerr=10*po2[0])
 plt.legend(loc='upper left')
 plt.tight_layout()
-plt.savefig("./figures/slope_efficiency")
-
+#plt.savefig("./figures/slope_efficiency")
+#
 ### findley clay plots
 #%%
 plt.figure()
@@ -134,7 +134,7 @@ plt.plot(XFit, linearFit(XFit, *po), label="$\\SI{%.3g}{\\milli\\watt}(-\\log R)
 plt.plot(lnRs, ls, 's')
 plt.legend()
 plt.tight_layout()
-plt.savefig("./figures/findlay_clay")
+#plt.savefig("./figures/findlay_clay")
 #%%
 # Relaxation oscillations
 Irs, Trs, Urs = np.genfromtxt("./measurements/4_relaxationsschwingung.csv", delimiter=',',
@@ -153,7 +153,7 @@ plt.xlabel("Pumplaserleistung in \\si{\\milli\\watt}")
 plt.ylabel("Periodendauer in \\si{\\micro\\second}")
 plotf(polyFit, 300, 1200, popt=po)
 plt.errorbar(Prs, frs, yerr=Ufrs, fmt='.', xerr = 10)
-plt.savefig("./figures/relaxationsschwingung")
+#plt.savefig("./figures/relaxationsschwingung")
 
 #%% razor blade plots
 
@@ -178,7 +178,7 @@ plt.xlabel("Winkel in \\si{\\degree}")
 plt.ylabel('Intensit\\"at in willk. einh.')
 plt.ylim(0, 140)
 plt.plot(Q - 254, I, 'd', color=palette[1])
-plt.savefig('./figures/angle_shg')
+#plt.savefig('./figures/angle_shg')
 
 
 #%%
@@ -218,4 +218,62 @@ for a0, ZAI, axis in [(3, ZXI, 'x'), (13.5, ZYI, 'y')]:
     j+=1
 plt.tight_layout()
 # hide tick and tick label of the big axes
-fig.savefig("./figures/beam_div")
+#fig.savefig("./figures/beam_div")
+
+#%% Jonathan plots
+def linearFit(x, a, b):
+    return a * x + b
+def f(x):
+    return ((x - 1) * np.exp(4 * x) + (x + 1) * np.exp(2 * x))/(np.exp(2 * x) - 1)**3
+
+def autokorrFit(x, x0, invw, I0):
+    return 10*I0*f((x - x0)*invw)
+
+plotf(autokorrFit, -5, 5, popt=[1,.1, 1])
+#autokorrFit(DL, *p0)
+#%%
+IL, PL = np.genfromtxt("./measurements/5_pi_qs_ml.csv", delimiter=',',
+                         usecols=(0,1), skip_header=1, unpack=True)
+ILAU, A, T, UT = np.genfromtxt("./measurements/6_freq_pulse_amplitude.csv", delimiter=',',
+                          skip_header=1, unpack=True)
+
+fig = plt.figure()
+#ax2.plot(IL2, A, '.')
+plt.xlabel("Pumpstrom in mA")
+p1=plt.plot(IL, PL, 'd', color=palette[0])
+po, pc = curve_fit(linearFit, IL[:10], PL[:10])
+plotf(linearFit, 500, 2500, popt=po)
+plt.ylabel("Laserleistung in mW")
+
+plt.twinx()
+plt.ylabel("Amplitude in mV")
+p2=plt.plot(ILAU, A, 's', color=palette[1])
+plt.legend(p2+p1, ['Riesenpuls Amplitude', 'Schwellstrom %4.0f mV' % (-po[1]/po[0])], loc='upper left', numpoints=1)
+plt.savefig("./figures/pi_qs_uebergang.pdf")
+#%%
+plt.figure()
+plt.xlabel("Pumpstrom in mA")
+plt.ylabel("Riesenpuls Frequenz in \\si{\\per\\micro\\second}")
+plt.plot(ILAU, 1/T, 's')
+plt.savefig("./figures/freq_riesenpulse.pdf")
+#%%
+cl = 2.998*10**8
+I, T, U = np.genfromtxt("./measurements/7_modecoupling_frequency.csv", delimiter=',',
+                          skip_header=1, unpack=True)
+print('Frequency khz ', 1/T*10**3, ' uncertainty ' , 10**3*(1/(T-U) - 1/(T+U)))
+print('resonator length ' , cl*T*10**-9/2)
+#%%
+plt.figure()
+p0=[]
+DL, AM = np.genfromtxt("./measurements/11_auto_correlation.csv", delimiter=',',
+                         usecols=(0,1), skip_header=1, skip_footer=2, unpack=True)
+#parameters2 = curve_fit(autokorrFit, DL, AM)
+#[a2, b2] = parameters2[0]
+p0=[1.6, .45, 205]
+x2 = np.arange(0.2, 3.4, 0.2)
+plt.plot(DL, AM, '.')
+po, pc = curve_fit(autokorrFit, DL, AM, p0=p0)
+plotf(autokorrFit, -2, 5, popt=po, N=1000, label='Breite %.3g mm' % (1/po[1]))
+print(1/po[1])
+plt.legend()
+plt.savefig("./figures/autokorr_breite.pdf")
