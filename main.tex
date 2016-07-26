@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{siunitx}
 \usepackage{mhchem}
+% \usepackage{float}
 % \usepackage[T1]{fontenc}
 % \usepackage{charter}
 \usepackage[bitstream-charter]{mathdesign}
@@ -177,7 +178,7 @@ wurden die Schwelleistungen durch lineare extrapolation bei Größeren Pumpleist
 ermittelt. Diese Schwelleistungen sind in Findlay-Clay darstellung in Abbildung
 \ref{fig:findlay_clay} zu sehen. Die Verluste pro Rundgang sind das Verhältnis
 der Fitkoeffizienten und sie ergeben sich zu \SI{65}{\percent}. 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{./figures/findlay_clay.pdf}
   \caption{Findlay-Clay darstellung der Laserschwellen}
@@ -189,7 +190,7 @@ Mithilfe eines Opto-Akustischen Modulators kann der stabile Laserbetrieb gestör
 werden. Der AOM ändert seinen Brechungsindex je nach angelegter Spannung. In unserem 
 Fall wurde mit einem Frequenzgenerator eine Rechtecksfunktion erzeugt, die man
 in Abbildung \ref{fig:relaxation_osci} sehen kann.
-\begin{figure}[h!]
+\begin{figure}[H]
   \begin{floatrow}
     \ffigbox{
       \includegraphics[width=\linewidth]{./figures/relaxationsschwingung.pdf}
@@ -214,7 +215,7 @@ Grundmode $\text{TEM}_{00}$. Sie wurden mit einer Handykamera abfotografiert und
 für Abbildung \ref{fig:tem10} und \ref{fig:tem20} nachbearbeitet. Es wurden 
 Hermite-Moden beobachtet, was für eine rechteckige Symmetrie des Lasers spricht. 
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \begin{floatrow}
     \ffigbox{
       \includegraphics[width=\linewidth]{./figures/tem10.JPG}
@@ -231,6 +232,25 @@ Hermite-Moden beobachtet, was für eine rechteckige Symmetrie des Lasers spricht
   \end{floatrow}
 \end{figure}
 
+\section{Gepulster Betrieb}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{./figures/pi_qs_uebergang.pdf}
+  \caption{}
+  \label{fig:pi_qs_uebergang}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{./figures/freq_riesenpulse.pdf}
+  \caption{}
+  \label{fig:freq_riesenpulse}
+\end{figure}
+Pulsfrequenz \SI{40 \pm 1}{\kilo\hertz}
+Resonatorlänge \SI{3.72}{\metre}.
+
+
+
 \section{Erzeugung der 2. Harmonischen}
 \subsection{Intensität und Fokushärte}
 Die Intensität des Frequenzverdoppelten Strahls wurde mithilfe eines
@@ -238,7 +258,7 @@ Photomultipliers vermessen. Der vorhandene thermische Messkopf zur Leistungsmess
 war nicht sensitiv genug um damit die Leistung direkt zu vermessen zu können.
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \begin{floatrow}
     \ffigbox{
       \includegraphics[width=\linewidth]{./figures/angle_shg.pdf}
@@ -305,7 +325,7 @@ als Fit für die Abbildungen \ref{fig:beam_div} verwendet.
 %
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{./figures/beam_div.pdf}
   \caption{Strahldurchmesser und Intensitätsprofile. Der Strahl wurde mit einer
@@ -317,6 +337,17 @@ als Fit für die Abbildungen \ref{fig:beam_div} verwendet.
 
 
 
+
+
+
+
+\section{Autokorrelation}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{./figures/autokorr_breite.pdf}
+  \caption{}
+  \label{fig:autokorr_breite}
+\end{figure}
 
 
 \end{document}
