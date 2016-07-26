@@ -232,24 +232,62 @@ Hermite-Moden beobachtet, was für eine rechteckige Symmetrie des Lasers spricht
   \end{floatrow}
 \end{figure}
 
+\newpage
+
 \section{Gepulster Betrieb}
+\subsection{Varianten des Laserbetriebes}
+Bis zu diesem Punkt wurde der Laser ausschließlich im cw-Modus betrieben. Durch das Einbauen eines
+sättigbaren Absorbers (SESAM) in den Resonator ist es jedoch möglich, den Laser durch Modenkopplung im
+Resonator in andere Betriebszustände zu bringen. Konkret sind der bekannte cw-Betrieb, der Q-Switching-
+Betrieb im modengekoppelten Zustand (QS-ML-Betrieb) und der Dauerstrichbetrieb im modengekoppelten
+Zustand (cw-ML-Betrieb) möglich. Je nach angelegtem Pumpstrom wechseln diese Betriebszustände, in
+Abbildung \ref{fig:pi_qs_uebergang} kann man dies beobachten. Bis zu einem Pumpstrom von etwa
+$\SI{1300}{\milli\ampere}$ befindet er sich im cw-Betrieb, bei einem Pumpstrom von etwa 
+$\SI{1300}{\milli\ampere} - \SI{1800}{\milli\ampere}$ im QS-ML-Betrieb. Oberhalb davon befindet
+sich der Laser im cw-ML-Betrieb.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{./figures/pi_qs_uebergang.pdf}
-  \caption{}
+  \caption{Laserkennlinie im gepulsten Betrieb und Amplitude der auftretenden Riesenpulse. Der Fit
+  zur Bestimmung der Laserschwelle wurde nur durch die ersten 13 Messwerte gelegt.}
   \label{fig:pi_qs_uebergang}
 \end{figure}
+
+Mithilfe eines linearen Fits kann außerdem die Laserschwelle bestimmt werden, sie berechnet sich als
+Nullstelle des Fits zu $\SI{701}{\milli\ampere}$. Um das Ergebnis nicht zu verfälschen, wurden für 
+den Fit einige Werte bei höheren Pumpströmen nicht berücksichtigt, da die Kennlinie für diese
+Ströme einen Knick hat und nicht rein linear verläuft.
+
+\subsection{Riesenpulse}
+Im QS-ML-Betrieb treten Pulse von hohen Intensitäten, sogenannte Riesenpulse auf.
+Bereits in Abbildung \ref{fig:pi_qs_uebergang} kann man ihre Amplitude im Verhältnis
+zum Pumpstrom beachten.
+Auch ihre Frequenz variiert jedoch mit dem angelegten Pumpstrom, in Abbildung 
+\ref{fig:freq_riesenpulse} sind die beiden Größen gegeneinander aufgetragen, 
+das Verhältnis scheint linear zu sein. Das ist sinnvoll, da durch höhere
+Pumpeistung linear die Verstärkung erhöht wird und somit auch die Frequenz,
+in der Pulse am SESAM entstehen.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{./figures/freq_riesenpulse.pdf}
-  \caption{}
+  \caption{Frequenz der Riesenpulse in Abhängigkeit zum Pumpstrom. Am Oszilloskop wurde die 
+  Periodendauer der Pulse abgelesen, was für höhere Pumpströme deutlich schwerer wurde, 
+  daher ist die Abweichung von der Linearität hier besonders groß.}
   \label{fig:freq_riesenpulse}
 \end{figure}
 Pulsfrequenz \SI{40 \pm 1}{\kilo\hertz}
 Resonatorlänge \SI{3.72}{\metre}.
 
+\subsection{Resonatorlänge}
+Um die Resonatorlänge zu bestimmen, benötigt man die Pulsfrequenz im Resonator. Diese beträgt
+etwa \SI{40 \pm 1}{\kilo\hertz} und hängt mit der Resonatorlänge zusammen durch
+\begin{equation}
+2L = \frac{c}{\nu} \Leftrightarrow L = \SI{3.72}{\metre}
+\end{equation}
 
+\newpage
 
 \section{Erzeugung der 2. Harmonischen}
 \subsection{Intensität und Fokushärte}
@@ -337,17 +375,40 @@ als Fit für die Abbildungen \ref{fig:beam_div} verwendet.
 
 
 
-
+\newpage
 
 
 
 \section{Autokorrelation}
+Der letzte Versuchsabschnitt beschäftigt sich mit der optischen Autokorrelation. Bei dieser
+werden zwei Signale von identischer Intensität zeitlich verschoben, anschließend integriert
+man über deren Produkt, um die symmetrische Autokorrelationsfunktion (AKF) $\phi_{xx}(\tau)$ zu 
+erhalten, es gilt also:
+\begin{equation}
+\phi_{xx}(\tau) = \phi_{xx}(-\tau) = \lim\limits_{T \rightarrow \infty}{\int_{-T}^{T} dt x(t)x(t+\tau)}
+\end{equation}
+In diesem Fall betrachten wir sech-Pulse der Form:
+\begin{equation}
+x(t) = I_{0}sech^{2}(\frac{t}{\tau_{sech}})
+\end{equation}
+Die erhaltene AKF ist etwas breiter als die des einlaufenden Signals,
+die FWHM ("Full Width Half Maximum") beträgt gerade das $1.5427$-Fache vom einlaufenden Signal.
+Das Ziel ist nun, mithilfe der AKF die FWHM des einlaufenden Signals, welche
+in etwa der Dauer eines Pulses entspricht, zu bestimmen. Abbildung \ref{fig:autokorr_breite}
+zeigt die mit unseren Messwerten erhaltene AKF.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{./figures/autokorr_breite.pdf}
-  \caption{}
+  \caption{Autokorrelationsfunktion zum Phasenunterschied der zwei Pulse}
   \label{fig:autokorr_breite}
 \end{figure}
 
+Die FWHM berechnet sich zu $\SI{2.2}{\milli\metre}$, das entspricht für Pulse mit der
+Geschwindigkeit $c$ einer FWHM von $\SI{7.4}{\pico\second}$.
+Damit ist die FWHM der einlaufenden Pulse, also die Pulsdauer:
+\begin{equation}
+\tau_{sech} = \frac{\tau_{AKF}}{1.5427} = \SI{4.8}{\pico\second}
+\end{equation}
 
 \end{document}
