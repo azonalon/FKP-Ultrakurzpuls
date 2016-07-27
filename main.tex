@@ -1,4 +1,4 @@
-\documentclass[11pt,twoside=true]{scrartcl}
+\documentclass[11pt,twoside=semi]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage[english, ngerman]{babel}
 \usepackage{amsmath,amsthm,verbatim,amssymb,amsfonts,amscd, graphicx}
@@ -71,9 +71,6 @@ Betreuer: Bernhard Kreipe}
 \begin{document}
 
 \maketitle
-\begin{text}
-Was nützt dem Wolf die Freiheit, wenn er das Schaf nicht fressen darf?
-\end{text}
 \newpage
 \section{Dauerstrichbetrieb}
 \textsl{Bestimmen sie den theoretischen Verlauf der $g_0-P$ Kennlinie} 
@@ -150,7 +147,7 @@ Störung von $P$ durch z.B. einen akusto-optischen Modulator (siehe kommenden Ab
 \subsection{Schwellenstrom und Slope-Efficiency}
 Zuerst wird der Laser mit einem hochreflektierenden Spiegel ($R > 0.99$) betrieben.
 Die Ausgangsleistung des Lasers wurde in abhängigkeit des Pumpstroms mit einem 
-Thermischen Leistungsmesskopf ermittelt. Danach wurde der Strahl des Pumplasers
+thermischen Leistungsmesskopf ermittelt. Danach wurde der Strahl des Pumplasers
 ausgekoppelt und dasselbe für den Pumplaser wiederholt, um dann durch den Fit
 aus dem ersten Graphen den differentiellen Wirkungsgrad zu erhalten. Beide
 Messungen sind in Abbildung \ref{fig:slope_efficiency} veranschaulicht.
@@ -174,8 +171,8 @@ Messungen sind in Abbildung \ref{fig:slope_efficiency} veranschaulicht.
 \subsection{Auskopplungsstärke}
 Der hochreflektierende Auskoppler ist in diesem Versuch durch andere Auskoppelspiegel
 mit definierten Transmissionswerten ausgetauscht worden. Aus den $P-I$  Diagrammen
-wurden die Schwelleistungen durch lineare extrapolation bei Größeren Pumpleistungen
-ermittelt. Diese Schwelleistungen sind in Findlay-Clay darstellung in Abbildung
+wurden die Schwelleistungen durch lineare extrapolation bei größeren Pumpleistungen
+ermittelt. Diese Schwelleistungen sind in Findlay-Clay-Darstellung in Abbildung
 \ref{fig:findlay_clay} zu sehen. Die Verluste pro Rundgang sind das Verhältnis
 der Fitkoeffizienten und sie ergeben sich zu \SI{65}{\percent}. 
 \begin{figure}[H]
@@ -210,10 +207,10 @@ in Abbildung \ref{fig:relaxation_osci} sehen kann.
 
 
 \subsection{Transversale Moden}
-Bei nicht optimaler justierung waren auch andere Moden zu erkennen als die 
+Bei nicht optimaler Justierung waren auch andere Moden zu erkennen als die 
 Grundmode $\text{TEM}_{00}$. Sie wurden mit einer Handykamera abfotografiert und
 für Abbildung \ref{fig:tem10} und \ref{fig:tem20} nachbearbeitet. Es wurden 
-Hermite-Moden beobachtet, was für eine rechteckige Symmetrie des Lasers spricht. 
+Hermite-Moden beobachtet, was für eine rechteckige Symmetrie des Resonators spricht. 
 
 \begin{figure}[H]
   \begin{floatrow}
@@ -277,8 +274,8 @@ in der Pulse am SESAM entstehen.
   daher ist die Abweichung von der Linearität hier besonders groß.}
   \label{fig:freq_riesenpulse}
 \end{figure}
-Pulsfrequenz \SI{40 \pm 1}{\kilo\hertz}
-Resonatorlänge \SI{3.72}{\metre}.
+% Pulsfrequenz \SI{40 \pm 1}{\kilo\hertz}
+% Resonatorlänge \SI{3.72}{\metre}.
 
 \subsection{Resonatorlänge}
 Um die Resonatorlänge zu bestimmen, benötigt man die Pulsfrequenz im Resonator. Diese beträgt
@@ -303,7 +300,7 @@ war nicht sensitiv genug um damit die Leistung direkt zu vermessen zu können.
     }
     {%
       \caption{Transversalwinkelabhängigkeit SH-Intentensität. Die Funktion
-      ist symmetrisch erwartet worden. Vermutlich hat die Verschiebung vom Fokus
+      sollte symmetrisch sein, is es jedoch nicht. Vermutlich hat die Verschiebung vom Fokus
       weg beim Rotieren des Kristalls diese Symmetrie gebrochen. }
       \label{fig:angle_shg}
     }
@@ -385,11 +382,11 @@ werden zwei Signale von identischer Intensität zeitlich verschoben, anschließe
 man über deren Produkt, um die symmetrische Autokorrelationsfunktion (AKF) $\phi_{xx}(\tau)$ zu 
 erhalten, es gilt also:
 \begin{equation}
-\phi_{xx}(\tau) = \phi_{xx}(-\tau) = \lim\limits_{T \rightarrow \infty}{\int_{-T}^{T} dt x(t)x(t+\tau)}
+\phi_{xx}(\tau) = \phi_{xx}(-\tau) = \lim\limits_{T \rightarrow \infty}{\int_{-T}^{T} dt\, x(t)x(t+\tau)}
 \end{equation}
-In diesem Fall betrachten wir sech-Pulse der Form:
+In diesem Fall betrachten wir \emph{sech-Pulse} der Form:
 \begin{equation}
-x(t) = I_{0}sech^{2}(\frac{t}{\tau_{sech}})
+x(t) = I_{0}\operatorname{sech}^{2}\left(\frac{t}{\tau_{\text{sech}}}\right)
 \end{equation}
 Die erhaltene AKF ist etwas breiter als die des einlaufenden Signals,
 die FWHM ("Full Width Half Maximum") beträgt gerade das $1.5427$-Fache vom einlaufenden Signal.
@@ -408,7 +405,7 @@ Die FWHM berechnet sich zu $\SI{2.2}{\milli\metre}$, das entspricht für Pulse m
 Geschwindigkeit $c$ einer FWHM von $\SI{7.4}{\pico\second}$.
 Damit ist die FWHM der einlaufenden Pulse, also die Pulsdauer:
 \begin{equation}
-\tau_{sech} = \frac{\tau_{AKF}}{1.5427} = \SI{4.8}{\pico\second}
+\tau_{\text{sech}} = \frac{\tau_{AKF}}{1.5427} = \SI{4.8}{\pico\second}
 \end{equation}
 
 \end{document}
